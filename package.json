@@ -1,0 +1,25 @@
+{
+  "name": "@yjtec/mob-layout",
+  "version": "0.0.1",
+  "description": "yjtec mob-layout",
+  "main": "lib/index.js",
+  "files":["lib","es"],
+  "module": "dist/index.esm.js",
+  "authors": {
+    "name": "kidkang",
+    "email": "723616880@qq.com"
+  },
+  "repository": "https://github.com/yjtec/mob-layout/mob-layout",
+  "scripts": {
+    "dev": "father doc dev",
+    "build": "father build"
+  },
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "devDependencies": {},
+  "license": "MIT",
+  "dependencies": {
+    "react-document-title": "^2.0.3"
+  }
+}
