@@ -32,15 +32,19 @@ import defaultGetPageTitle from './getPageTitle';
 import getMenuData from './utils/getMenuData';
 
 var defaultPageTitleRender = function defaultPageTitleRender(pageProps, props) {
-  var pageTitleRender = props.pageTitleRender;
+  var pageTitleRender = props.pageTitleRender,
+      _props$ignoreTitle = props.ignoreTitle,
+      ignoreTitle = _props$ignoreTitle === void 0 ? false : _props$ignoreTitle;
 
   if (pageTitleRender === false) {
     return props.title || '';
   }
 
-  if (pageTitleRender) {}
+  if (pageTitleRender) {
+    return pageTitleRender();
+  }
 
-  return defaultGetPageTitle(pageProps);
+  return defaultGetPageTitle(pageProps, ignoreTitle);
 };
 
 var BasicLayout =

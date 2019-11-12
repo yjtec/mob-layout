@@ -3,14 +3,14 @@ import DocumentTitle from 'react-document-title';
 import defaultGetPageTitle from './getPageTitle';
 import getMenuData from './utils/getMenuData';
 const defaultPageTitleRender = (pageProps,props) => {
-  const {pageTitleRender} = props;
+  const {pageTitleRender,ignoreTitle=false} = props;
   if(pageTitleRender === false){
     return props.title || '';
   }
   if(pageTitleRender){
-
+    return pageTitleRender();
   }
-  return defaultGetPageTitle(pageProps);
+  return defaultGetPageTitle(pageProps,ignoreTitle);
 }
 class BasicLayout extends React.Component{
   render(){

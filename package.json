@@ -1,6 +1,6 @@
 {
   "name": "@yjtec/mob-layout",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "yjtec mob-layout",
   "main": "lib/index.js",
   "files":["lib","es"],
